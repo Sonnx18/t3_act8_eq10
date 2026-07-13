@@ -14,7 +14,9 @@ function SideBar({ onLogout }) {
           Nuevo Cliente
         </span>
         <span className="sidebar-link sidebar-link-simulado">Clientes</span>
-        <span className="sidebar-link sidebar-link-simulado">Productos</span>
+        <NavLink to="/dashboard/productos" className="sidebar-link">
+          Productos
+        </NavLink>
       </nav>
 
       <button className="sidebar-cerrar-sesion" onClick={onLogout}>

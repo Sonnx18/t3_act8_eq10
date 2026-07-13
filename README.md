@@ -1,16 +1,48 @@
-# React + Vite
+# YIN Soluciones — Sistema de Reparaciones (t3_act8_eq10)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mini sistema en React que simula un login real contra una API de autenticación y una tabla de
+datos con filtros, paginación y CRUD contra una API de terceros. Actividad 8 — Consumo de APIs de
+Terceros.
 
-Currently, two official plugins are available:
+## Integrantes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [Nombre completo integrante 1]
+- Yhudiel Mendoza Sánchez
 
-## React Compiler
+## API utilizada
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Login / registro:** [DummyJSON Auth](https://dummyjson.com/docs/auth) (`/auth/login`, `/users/add`)
+- **Tabla de datos (CRUD):** [DummyJSON Products](https://dummyjson.com/docs/products) (`/products`)
 
-## Expanding the ESLint configuration
+## Despliegue
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Proyecto desplegado en: `[pendiente]`
+
+## Tecnologías
+
+- React 19 + Vite
+- React Router
+- Axios
+
+## Cómo correrlo localmente
+
+```bash
+npm install
+npm run dev
+```
+
+Para compilar la versión de producción:
+
+```bash
+npm run build
+```
+
+## Estructura del proyecto
+
+```
+src/
+  components/   Componentes reutilizables (Login, Layout, Tabla)
+  Hooks/        Hooks personalizados (useAuth)
+  Pages/        Vistas/páginas de la aplicación
+  Services/     Llamadas a las APIs externas (authService, productosService)
+```

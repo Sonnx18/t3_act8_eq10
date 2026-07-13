@@ -13,7 +13,7 @@ function App() {
   const { usuario, estaAutenticado, login, logout } = useAuth();
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route
           path="/"
