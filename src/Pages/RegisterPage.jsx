@@ -1,17 +1,16 @@
 import { useNavigate } from "react-router-dom";
-import LoginForm from "../components/Login/LoginForm";
+import RegisterForm from "../components/Login/RegisterForm";
 import logo from "../assets/logo.png";
 
-function LoginPage({ onLogin }) {
+function RegisterPage() {
   const navigate = useNavigate();
 
-  const handleLoginExitoso = (datosUsuario) => {
-    onLogin(datosUsuario);
-    navigate("/dashboard");
+  const handleRegistroExitoso = () => {
+    navigate("/");
   };
 
   return (
-    <div className="login-page">
+    <div className="login-page login-page-invertido">
       <div className="login-panel-izq">
         <h2>Bienvenidos a YIN</h2>
         <p>
@@ -23,11 +22,11 @@ function LoginPage({ onLogin }) {
       <div className="login-panel-der">
         <div className="login-card">
           <img src={logo} alt="YIN soluciones" className="login-logo" />
-          <LoginForm onLoginExitoso={handleLoginExitoso} />
+          <RegisterForm onRegistroExitoso={handleRegistroExitoso} />
         </div>
       </div>
     </div>
   );
 }
 
-export default LoginPage;
+export default RegisterPage;

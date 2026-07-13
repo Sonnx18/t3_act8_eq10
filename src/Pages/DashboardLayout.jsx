@@ -7,7 +7,7 @@ function DashboardLayout({ usuario, onLogout }) {
     <div className="dashboard-layout">
       <SideBar onLogout={onLogout} />
       <div className="dashboard-contenido">
-        <NavBar usuario={usuario} onLogout={onLogout} />
+        <NavBar usuario={usuario} />
         <main className="dashboard-main">
           <Outlet />
         </main>

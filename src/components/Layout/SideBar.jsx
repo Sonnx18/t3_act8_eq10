@@ -1,36 +1,24 @@
 import { NavLink } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 function SideBar({ onLogout }) {
   return (
     <aside className="sidebar">
-      <div className="sidebar-logo">
-        YIN<span className="sidebar-logo-acento">⚡</span>
-        <small>soluciones</small>
-      </div>
+      <img src={logo} alt="YIN soluciones" className="sidebar-logo-img" />
 
       <nav className="sidebar-nav">
-        <NavLink
-          to="/dashboard"
-          end
-          className={({ isActive }) =>
-            isActive ? "sidebar-link sidebar-link-activo" : "sidebar-link"
-          }
-        >
-          Dashboard
+        <NavLink to="/dashboard" end className="sidebar-link">
+          Tickets
         </NavLink>
-        <NavLink
-          to="/dashboard/productos"
-          className={({ isActive }) =>
-            isActive ? "sidebar-link sidebar-link-activo" : "sidebar-link"
-          }
-        >
-          Productos
-        </NavLink>
+        <span className="sidebar-link sidebar-link-simulado">
+          Nuevo Cliente
+        </span>
         <span className="sidebar-link sidebar-link-simulado">Clientes</span>
+        <span className="sidebar-link sidebar-link-simulado">Productos</span>
       </nav>
 
       <button className="sidebar-cerrar-sesion" onClick={onLogout}>
-        Cerrar sesión
+        Cerrar Sesion
       </button>
     </aside>
   );

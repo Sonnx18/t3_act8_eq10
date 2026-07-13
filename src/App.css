@@ -26,6 +26,10 @@ body {
   min-height: 100vh;
 }
 
+.login-page-invertido {
+  flex-direction: row-reverse;
+}
+
 .login-panel-izq {
   flex: 1;
   background: linear-gradient(135deg, var(--acento-600), var(--sidebar-oscuro));
@@ -65,6 +69,12 @@ body {
   padding: 48px 40px;
   width: 380px;
   text-align: center;
+}
+
+.login-logo {
+  display: block;
+  height: 56px;
+  margin: 0 auto 28px;
 }
 
 .login-card h1 {
@@ -144,10 +154,45 @@ body {
   font-size: 13px;
 }
 
+.login-error-campo {
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.login-link-olvido {
+  align-self: flex-end;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--acento-600);
+  cursor: pointer;
+}
+
+.login-link-olvido:hover {
+  text-decoration: underline;
+}
+
+.login-registrarse {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sidebar-oscuro);
+  margin-top: 8px;
+}
+
+.login-registrarse a {
+  color: var(--acento-600);
+  text-decoration: none;
+}
+
+.login-registrarse a:hover {
+  text-decoration: underline;
+}
+
 /* ===== DASHBOARD LAYOUT ===== */
 .dashboard-layout {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .dashboard-contenido {
@@ -155,11 +200,14 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .dashboard-main {
   flex: 1;
   padding: 32px;
+  overflow-y: auto;
 }
 
 /* ===== SIDEBAR ===== */
@@ -173,21 +221,9 @@ body {
   padding: 28px 20px;
 }
 
-.sidebar-logo {
-  font-size: 22px;
-  font-weight: 700;
+.sidebar-logo-img {
+  height: 44px;
   margin-bottom: 40px;
-}
-
-.sidebar-logo-acento {
-  color: var(--acento-600);
-}
-
-.sidebar-logo small {
-  display: block;
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--texto-placeholder);
 }
 
 .sidebar-nav {
@@ -201,25 +237,21 @@ body {
   display: block;
   padding: 12px 14px;
   border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.06);
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.15s ease;
 }
 
 .sidebar-link:hover {
-  background-color: rgba(255, 255, 255, 0.08);
-}
-
-.sidebar-link-activo {
   background-color: var(--acento-600);
   color: white;
 }
 
 .sidebar-link-simulado {
-  opacity: 0.6;
   cursor: default;
 }
 
@@ -270,24 +302,6 @@ body {
   color: var(--sidebar-oscuro);
 }
 
-.navbar-cerrar-sesion {
-  height: 36px;
-  padding: 0 16px;
-  background-color: transparent;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--texto-secundario);
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.navbar-cerrar-sesion:hover {
-  border-color: #dc2626;
-  color: #dc2626;
-}
-
 /* ===== RESUMEN (DASHBOARD) ===== */
 .resumen-page h1 {
   font-size: 26px;
@@ -315,9 +329,39 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   padding: 20px 24px;
   display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 160px;
+  flex: 1;
+}
+
+.resumen-tarjeta-icono {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.resumen-tarjeta-icono-azul {
+  background-color: #dbeafe;
+}
+
+.resumen-tarjeta-icono-naranja {
+  background-color: #fef3c7;
+}
+
+.resumen-tarjeta-icono-verde {
+  background-color: #dcfce7;
+}
+
+.resumen-tarjeta-texto {
+  display: flex;
   flex-direction: column;
   gap: 4px;
-  min-width: 160px;
 }
 
 .resumen-tarjeta-valor {
@@ -334,4 +378,301 @@ body {
 .resumen-nota {
   color: var(--texto-secundario);
   font-size: 14px;
+}
+
+/* ===== RESUMEN - COLUMNAS ===== */
+.resumen-columnas {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.resumen-tarjeta-panel {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 20px 24px;
+}
+
+.resumen-tarjeta-panel h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--sidebar-oscuro);
+}
+
+.resumen-tickets-recientes {
+  flex: 2;
+}
+
+.resumen-panel-encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.resumen-ver-todos {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--acento-600);
+  cursor: pointer;
+}
+
+.resumen-lista-tickets {
+  list-style: none;
+}
+
+.resumen-ticket {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-top: 1px solid #f1f2fc;
+}
+
+.resumen-ticket-icono {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f1f2fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.resumen-ticket-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.resumen-ticket-id {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--acento-600);
+}
+
+.resumen-ticket-cliente {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sidebar-oscuro);
+}
+
+.resumen-ticket-detalle {
+  font-size: 12px;
+  color: var(--texto-secundario);
+}
+
+.estado-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.estado-badge-completado {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.estado-badge-proceso {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.estado-badge-espera {
+  background-color: #e5e7fa;
+  color: var(--acento-700);
+}
+
+/* ===== RESUMEN - COLUMNA LATERAL ===== */
+.resumen-columna-lateral {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 260px;
+}
+
+.resumen-estados {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.resumen-estado-encabezado {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--texto-secundario);
+  margin-bottom: 6px;
+}
+
+.resumen-estado-barra {
+  height: 8px;
+  background-color: #f1f2fc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.resumen-estado-progreso {
+  height: 100%;
+  border-radius: 8px;
+}
+
+.resumen-estado-progreso-completado {
+  background-color: #22c55e;
+}
+
+.resumen-estado-progreso-espera {
+  background-color: var(--acento-600);
+}
+
+.resumen-estado-progreso-proceso {
+  background-color: #f59e0b;
+}
+
+.resumen-estado-progreso-entregado {
+  background-color: #d1d5db;
+}
+
+.resumen-tecnicos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.resumen-tecnico {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.resumen-tecnico-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--acento-600);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.resumen-tecnico-nombre {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sidebar-oscuro);
+  flex: 1;
+}
+
+.resumen-tecnico-tickets {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--texto-secundario);
+  background-color: #f1f2fc;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .resumen-columnas {
+    flex-direction: column;
+  }
+
+  .resumen-columna-lateral {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .login-page,
+  .login-page-invertido {
+    flex-direction: column;
+  }
+
+  .login-panel-izq {
+    padding: 32px 20px;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 380px;
+    padding: 40px 24px;
+  }
+
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    padding: 14px 20px;
+    gap: 16px;
+  }
+
+  .sidebar-logo-img {
+    height: 32px;
+    margin-bottom: 0;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .sidebar-cerrar-sesion {
+    height: 36px;
+    width: auto;
+    padding: 0 16px;
+  }
+
+  .dashboard-main {
+    padding: 20px;
+  }
+
+  .resumen-tarjetas {
+    flex-wrap: wrap;
+  }
+
+  .resumen-tarjeta {
+    min-width: 220px;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .navbar-nombre {
+    display: none;
+  }
+
+  .resumen-tarjeta {
+    min-width: 100%;
+  }
+
+  .resumen-ticket {
+    flex-wrap: wrap;
+  }
+
+  .estado-badge {
+    margin-left: 54px;
+  }
 }

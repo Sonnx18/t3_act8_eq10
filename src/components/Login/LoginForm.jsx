@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { loginUsuario } from "../../services/authService";
+import { Link } from "react-router-dom";
+import { loginUsuario } from "../../Services/authService";
 
 function LoginForm({ onLoginExitoso }) {
   const [username, setUsername] = useState("");
@@ -31,7 +32,7 @@ function LoginForm({ onLoginExitoso }) {
   return (
     <form onSubmit={handleSubmit} className="login-form">
       <div className="login-field">
-        <label>Usuario o correo</label>
+        <label>Introduce tu correo:</label>
         <input
           type="text"
           value={username}
@@ -41,7 +42,7 @@ function LoginForm({ onLoginExitoso }) {
       </div>
 
       <div className="login-field">
-        <label>Contraseña</label>
+        <label>Introduce tu contraseña:</label>
         <input
           type="password"
           value={password}
@@ -55,6 +56,13 @@ function LoginForm({ onLoginExitoso }) {
       <button type="submit" disabled={cargando}>
         {cargando ? "Entrando..." : "Entrar"}
       </button>
+
+      <span className="login-link-olvido">¿Olvidaste la contraseña?</span>
+
+      <p className="login-registrarse">
+        ¿Aún no tienes cuenta?{" "}
+        <Link to="/registro">Registrarse</Link>
+      </p>
     </form>
   );
 }

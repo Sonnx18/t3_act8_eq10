@@ -1,4 +1,4 @@
-function NavBar({ usuario, onLogout }) {
+function NavBar({ usuario }) {
   return (
     <header className="navbar">
       <div className="navbar-spacer" />
@@ -12,9 +12,6 @@ function NavBar({ usuario, onLogout }) {
         <span className="navbar-nombre">
           {usuario?.firstName} {usuario?.lastName}
         </span>
-        <button className="navbar-cerrar-sesion" onClick={onLogout}>
-          Cerrar sesión
-        </button>
       </div>
     </header>
   );
