@@ -277,7 +277,7 @@ body {
 
 /* ===== NAVBAR ===== */
 .navbar {
-  height: 76px;
+  height: 88px;
   flex-shrink: 0;
   background-color: white;
   border-bottom: 1px solid #e5e7eb;
@@ -287,17 +287,29 @@ body {
   padding: 0 32px;
 }
 
+.navbar-titulo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.navbar-titulo-principal {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--sidebar-oscuro);
+  letter-spacing: 0.02em;
+}
+
+.navbar-titulo-sub {
+  font-size: 13px;
+  color: var(--texto-secundario);
+  text-transform: capitalize;
+}
+
 .navbar-usuario {
   display: flex;
   align-items: center;
-  gap: 12px;
-}
-
-.navbar-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
+  gap: 14px;
 }
 
 .navbar-nombre {
@@ -306,21 +318,22 @@ body {
   color: var(--sidebar-oscuro);
 }
 
-/* ===== RESUMEN (DASHBOARD) ===== */
-.resumen-page h1 {
-  font-size: 26px;
+.navbar-iniciales {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--acento-600);
+  color: white;
+  font-size: 13px;
   font-weight: 700;
-  color: var(--sidebar-oscuro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-transform: uppercase;
 }
 
-.resumen-subtitulo {
-  color: var(--texto-secundario);
-  font-size: 14px;
-  margin-top: 4px;
-  margin-bottom: 28px;
-  text-transform: capitalize;
-}
-
+/* ===== RESUMEN (DASHBOARD) ===== */
 .resumen-tarjetas {
   display: flex;
   gap: 20px;
@@ -329,9 +342,9 @@ body {
 
 .resumen-tarjeta {
   background: white;
-  border-radius: 12px;
+  border-radius: 50px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  padding: 20px 24px;
+  padding: 20px 28px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -665,6 +678,7 @@ body {
     padding: 0 16px;
   }
 
+  .navbar-titulo-sub,
   .navbar-nombre {
     display: none;
   }

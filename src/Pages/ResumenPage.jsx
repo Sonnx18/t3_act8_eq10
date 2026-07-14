@@ -52,14 +52,6 @@ function ResumenPage() {
 
   return (
     <div className="resumen-page">
-      <h1>Dashboard</h1>
-      <p className="resumen-subtitulo">
-        Resumen de operaciones - {new Date().toLocaleDateString("es-MX", {
-          month: "long",
-          year: "numeric",
-        })}
-      </p>
-
       <div className="resumen-tarjetas">
         <div className="resumen-tarjeta">
           <span className="resumen-tarjeta-icono resumen-tarjeta-icono-azul" />
