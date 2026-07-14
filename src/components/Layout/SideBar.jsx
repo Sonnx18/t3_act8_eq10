@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/YINLOGO.png";
+import logo from "../../assets/YINLOGO.PNG";
 
 function SideBar({ onLogout }) {
   return (

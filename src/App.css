@@ -222,8 +222,12 @@ body {
 }
 
 .sidebar-logo-img {
-  height: 44px;
+  width: 100%;
+  aspect-ratio: 718 / 312;
+  object-fit: cover;
+  object-position: center;
   margin-bottom: 40px;
+  display: block;
 }
 
 .sidebar-nav {
@@ -626,6 +630,7 @@ body {
   }
 
   .sidebar-logo-img {
+    width: auto;
     height: 32px;
     margin-bottom: 0;
   }
