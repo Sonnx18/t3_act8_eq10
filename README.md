@@ -1,12 +1,11 @@
 # YIN Soluciones — Sistema de Reparaciones (t3_act8_eq10)
 
 Mini sistema en React que simula un login real contra una API de autenticación y una tabla de
-datos con filtros, paginación y CRUD contra una API de terceros. Actividad 8 — Consumo de APIs de
-Terceros.
+datos con filtros, paginación y CRUD contra una API de terceros. Actividad 8 — Consumo de APIs de terceros.
 
 ## Integrantes
 
-- [Nombre completo integrante 1]
+- Noel López Herrera
 - Yhudiel Mendoza Sánchez
 
 ## API utilizada
@@ -16,7 +15,7 @@ Terceros.
 
 ## Despliegue
 
-Proyecto desplegado en: `[pendiente]`
+Proyecto desplegado en: ``
 
 ## Tecnologías
 
