@@ -17,6 +17,10 @@ datos con filtros, paginación y CRUD contra una API de terceros. Actividad 8 �
 
 Proyecto desplegado en: [http://168.119.237.117/t3_act8_eq10/](http://168.119.237.117/t3_act8_eq10/)
 
+Credenciales:
+user: emilys
+pass: emilyspass
+
 ## Tecnologías
 
 - React 19 + Vite
