@@ -13,7 +13,7 @@ const ticketsRecientes = [
   },
   {
     id: "YIN-2026-010",
-    cliente: "Ana Karen Mendoza Dominguez",
+    cliente: "Ana Karen Dominguez Sánchez",
     detalle: "No carga - puerto de carga dañado",
     estado: "En espera",
   },
